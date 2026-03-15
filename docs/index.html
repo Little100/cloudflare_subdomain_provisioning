@@ -282,7 +282,7 @@ html.dark .badge.del { color: #f87171; }
       <div class="step">
         <div class="step-title">1. Fork 仓库</div>
         <div class="step-content">
-          <p>前往本项目的开源仓库页，将仓库 Fork 至你的 Github 个人账号下。</p>
+          <p>前往 <a href="https://github.com/" target="_blank">本项目的开源仓库页</a>，将仓库 Fork 至你的 Github 个人账号下。</p>
           <p>如需变更内置规则（如限制单人注册量、保留前缀黑名单等），可直接在仓库页直接修改 <code>wrangler.toml</code> 的 <code>[vars]</code> 部分。</p>
         </div>
       </div>
@@ -290,7 +290,7 @@ html.dark .badge.del { color: #f87171; }
       <div class="step">
         <div class="step-title">2. 创建 OAuth 应用</div>
         <div class="step-content">
-          <p>登录 Github，前往 <strong>Settings &gt; Developer Settings &gt; OAuth Apps</strong> 新建应用。</p>
+          <p>登录 Github，前往 <a href="https://github.com/settings/developers" target="_blank"><strong>Settings &gt; Developer Settings &gt; OAuth Apps</strong></a> 新建应用。</p>
           <ul>
             <li><strong>Homepage URL</strong>: <code>https://your-worker-name.your-account.workers.dev</code></li>
             <li><strong>Authorization callback URL</strong>: <code>https://your-worker-name.your-account.workers.dev/auth/github/callback</code></li>
@@ -302,7 +302,7 @@ html.dark .badge.del { color: #f87171; }
       <div class="step">
         <div class="step-title">3. 获取 Cloudflare Token</div>
         <div class="step-content">
-          <p>在 Cloudflare 控制台为其准备特定权限的 Token 用以管理 DNS 区域：</p>
+          <p>在 <a href="https://dash.cloudflare.com/profile/api-tokens" target="_blank">Cloudflare 控制台 (API Tokens)</a> 为其准备特定权限的 Token 用以管理 DNS 区域：</p>
           <ul>
             <li>需要 <strong>Zone.DNS.Edit</strong> (创建与删除 DNS 记录)</li>
             <li>需要 <strong>Zone.Zone.Read</strong> (必须 - 用于寻址自动匹配对应的 Zone ID)</li>
@@ -313,8 +313,8 @@ html.dark .badge.del { color: #f87171; }
       <div class="step">
         <div class="step-title">4. 连接与绑定 D1 数据库</div>
         <div class="step-content">
-          <p>在 Cloudflare 控制台新建 D1 数据库并命名为 <code>subdomain-db</code>。记录下对应的 Database ID。</p>
-          <p>此时进入 <strong>Workers &amp; Pages</strong> 新建一个项目，选择 <strong>Connect to Git</strong> 并选择刚 Fork 的仓库，在此项目的配置界面找到 <strong>Bindings</strong>，将其与刚创建的 D1 数据库绑定，变量名为默认的 <code>DB</code>。</p>
+          <p>在 <a href="https://dash.cloudflare.com/" target="_blank">Cloudflare 控制台</a> 新建 D1 数据库并命名为 <code>subdomain-db</code>。记录下对应的 Database ID。</p>
+          <p>此时进入 <a href="https://dash.cloudflare.com/?to=/:account/workers-and-pages" target="_blank"><strong>Workers &amp; Pages</strong></a> 新建一个项目，选择 <strong>Connect to Git</strong> 并选择刚 Fork 的仓库，在此项目的配置界面找到 <strong>Bindings</strong>，将其与刚创建的 D1 数据库绑定，变量名为默认的 <code>DB</code>。</p>
         </div>
       </div>
     </div>
