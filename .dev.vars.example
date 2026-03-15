@@ -1,0 +1,23 @@
+# GitHub OAuth App 配置
+GITHUB_CLIENT_ID=your_github_client_id
+GITHUB_CLIENT_SECRET=your_github_client_secret
+
+# JWT 签名密钥（随机字符串）
+JWT_SECRET=your_random_jwt_secret_at_least_32_chars
+
+# Cloudflare API Token（需要 DNS 编辑权限）
+CF_API_TOKEN=your_cloudflare_api_token
+
+# 域名配置，多个用逗号分隔（Zone ID 自动解析）
+DOMAINS=example.com,example.org
+
+# 管理员 GitHub 用户名（逗号分隔，可选）
+ADMIN_USERS=your_github_username
+
+# SMTP 邮件通知配置（可选，不配置则使用 MailChannels 发信）
+# SMTP_HOST=smtp.example.com
+# SMTP_PORT=587
+# SMTP_USER=your_smtp_user
+# SMTP_PASS=your_smtp_password
+# SMTP_FROM=noreply@example.com
+# SMTP_FROM_NAME=SubDomain Hub

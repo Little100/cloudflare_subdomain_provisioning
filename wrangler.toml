@@ -1,0 +1,24 @@
+name = "subdomain-provisioning"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "subdomain-db"
+database_id = "YOUR_D1_DATABASE_ID"
+
+[vars]
+# 可用域名配置，多个用逗号分隔（Zone ID 将自动通过 CF API 解析）
+# DOMAINS = "example.com,example.org"
+
+# 禁止使用的子域名前缀，逗号分隔
+BANNED_PREFIXES = "www,ns1,ns2,ns,mc,mail,smtp,pop,pop3,imap,ftp,admin,api,cdn,dev,staging,test,beta,alpha,demo,status,blog,shop,store,app,dashboard,panel,portal,secure,vpn,proxy,relay,mx,mx1,mx2,autoconfig,autodiscover,_dmarc,_domainkey,cpanel,webmail,webdisk,cpcalendars,cpcontacts,ww,ww1,ww2,ww3"
+
+# 每个用户最多可注册的子域名数量
+MAX_SUBDOMAINS_PER_USER = "1"
+
+# 每个子域名下最多 DNS 记录数
+MAX_RECORDS_PER_SUBDOMAIN = "20"
+
+# 站点名称
+SITE_NAME = "SubDomain Hub"
